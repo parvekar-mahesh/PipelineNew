@@ -1,0 +1,33 @@
+<Commands>
+  <FileCopy>
+    <SourcePath>c:\Assignment\test.txt</SourcePath>
+    <DestinationPath>c:\Assignment1\testCopy.txt</DestinationPath>
+  </FileCopy>
+
+  <FileDelete>
+    <FilePath>c:\Assignment\testCopy.txt</FilePath>
+  </FileDelete>
+
+  <QueryFolderFiles>
+    <FolderPath>c:\Assignment</FolderPath>
+  </QueryFolderFiles>
+
+  <CreateFolder>
+    <FolderPath>c:\Assignment</FolderPath>
+	<FileName>TestFolder</FileName>
+  </CreateFolder>
+
+  <DownloadFile>
+    <SourceUrl>http://example.com/file/to/download</SourceUrl>
+    <DestinationPath>c:\Assignment</DestinationPath>
+  </DownloadFile>
+
+  <Wait>
+    <DurationInSeconds>10</DurationInSeconds>
+  </Wait>
+
+  <ConditionalCountRowsFile>
+    <FilePath>c:\Assignment\searchinFile.txt</FilePath>
+    <Condition>test</Condition>
+  </ConditionalCountRowsFile>
+</Commands>

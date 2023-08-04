@@ -12,13 +12,13 @@ namespace PipelineNew
 
         public WaitCommand(int waitTime)
         {
-            this.waitTime = waitTime;
+            this.waitTime = waitTime*1000;
         }
 
         public override void Execute()
         {
             Console.WriteLine($"Waiting for {waitTime} seconds...");
-            // Implementation code for waiting
+            System.Threading.Thread.Sleep( waitTime );
         }
     }
 }

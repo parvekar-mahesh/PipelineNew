@@ -50,6 +50,14 @@ namespace PipelineNew
                         list.Add("CreateFolder" + "," + folderPathCreate + "," + fileName);
                         break;
 
+
+                    case "DownloadFile":
+                        string SourceUrl = commandNode.SelectSingleNode("SourceUrl").InnerText;
+                        string DestinationPath = commandNode.SelectSingleNode("DestinationPath").InnerText;
+                        list.Add("DownloadFile" + "," + SourceUrl + "," + DestinationPath);
+                        break;
+
+
                     case "Wait":
                         int durationInSeconds = int.Parse(commandNode.SelectSingleNode("DurationInSeconds").InnerText);
                         list.Add("Wait" + "," + durationInSeconds );

@@ -25,8 +25,17 @@ namespace PipelineNew
 
         public override void Execute()
         {
-            File.Copy(sourceFile, destinationFile, true);
-            Console.WriteLine($"Copying file from '{sourceFile}' to '{destinationFile}'");
+            try
+            {
+                File.Copy(sourceFile, destinationFile, true);
+                Console.WriteLine($"Copying file from '{sourceFile}' to '{destinationFile}'");
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"Error Occured -"+ ex.Message );
+            }
+           
         }
     }
 

@@ -14,6 +14,11 @@ namespace PipelineNew
             switch (commandType)
             {
                 case "FileCopy":
+                    //check number of params they must be 2 else throw error 
+                    if (parameters.Count<2)
+                    {
+                        throw new ArgumentException($"Need atleast 2 parameters: {commandType}");
+                    }
                     return new FileCopyCommand(parameters[0], parameters[1]);
                 case "FileDelete":
                     return new FileDeleteCommand(parameters[0]);

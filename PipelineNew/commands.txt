@@ -1,0 +1,9 @@
+FileCopy,c:\Assignment\test.txt,c:\Assignment\testCopy.txt 
+FileDelete, c:\Assignment\testCopy.txt
+QueryFolderFiles, c:\Assignment
+CreateFolder, c:\Assignment,NewFolderCreated
+DownloadFile, c:\Assigment\testCopy.txt,outputFile
+Wait,10
+ConditionalCountRowsFile, c:\Assignment\searchinFile.txt,test
+
+

@@ -18,8 +18,17 @@ namespace PipelineNew
 
         public override void Execute()
         {
-            Console.WriteLine($"Deleting file '{filePath}'...");
-            File.Delete(filePath);
+            try
+            {
+                Console.WriteLine($"Deleting file '{filePath}'...");
+                File.Delete(filePath);
+            }
+            catch (Exception ex )
+            {
+
+                Console.WriteLine($"error Deleting file '{filePath}'..." + ex.Message);
+            }
+       
         }
     }
 }

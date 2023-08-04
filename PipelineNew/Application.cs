@@ -7,8 +7,6 @@ using System.IO;
 
 namespace PipelineNew
 {
-   
-
     public class Application
     {
         private CommandFactory commandFactory;
@@ -22,7 +20,7 @@ namespace PipelineNew
         {
             IReadFile file = null;
             string extension = filePath.Substring(filePath.LastIndexOf('.'), 4);
-            if (extension== "txt")
+            if (extension== ".txt")
             {
                 file = new ReadCSVFile();
             }
